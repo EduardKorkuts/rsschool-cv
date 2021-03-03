@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/icons/taoismo.svg" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+    <title>HTML, CSS & Git Basics</title>
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            width: 100vw;
+            height: 100vh;
+            background: rgb(218, 212, 212);
+            background: radial-gradient(circle, rgba(218, 212, 212, 1) 24%, rgba(218, 212, 212, 1) 59%, rgba(199, 207, 212, 1) 83%);
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 200px;
+            width: 65%;
+        }
+
+        .content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.1rem;
+        }
+
+        h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.7rem;
+            text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+            margin-bottom: 1rem;
+            letter-spacing: 1px;
+        }
+
+        h1 span:nth-child(1) {
+            color: whitesmoke;
+        }
+
+        .list {
+            display: flex;
+            flex-direction: column;
+            list-style: none;
+            justify-content: space-between;
+        }
+
+        .list li {
+            display: flex;
+            align-items: center;
+            line-height: 45px;
+            width: 100%;
+        }
+
+        .list li img {
+            margin-right: 10px;
+        }
+
+        .me {
+            position: relative;
+            transform: rotate(5deg);
+            filter: drop-shadow(-15px 10px 10px rgba(0, 0, 0, .7));
+        }
+
+        .me img {
+            display: block;
+            border-radius: 5px;
+        }
+
+        .pin {
+            width: 35px;
+            height: 35px;
+            position: absolute;
+            top: 0;
+            left: 120px;
+        }
+
+        .pin img {
+            max-width: 100%;
+        }
+
+        .mail, .phone {
+            padding-left: 10px;
+        }
+
+        .mail span {
+            color: whitesmoke;
+            padding: 0 2px;
+            font-size: 1.4rem;
+            filter: drop-shadow(-1px 1px 3px rgba(0, 0, 0, .8));
+        }
+
+        .phone {
+            color: #6f7582;
+            font-size: 1.2rem;
+            text-shadow: 0 0 1px whitesmoke;
+        }
+
+    </style>
+</head>
+<body>
+<main>
+    <h1>My awesome resume <span>!</span><span>&iexcl;</span></h1>
+    <div class="content">
+
+        <ul class="list">
+            <li><img src="./assets/icons/medalla.svg" alt="marker" width="20" height="20">Eduard Korkuts</li>
+            <li>
+                <img src="./assets/icons/medalla.svg" alt="marker" width="20" height="20">
+                Contacts: <span class="mail">Zealottpkr<span>@</span>gmail.com</span><span
+                    class="phone">+375 44 7689823</span>
+            </li>
+            <li>
+                <img src="./assets/icons/medalla.svg" alt="marker" width="20" height="20">
+                i am studying programming because it's "magic" and i can't help surprising at its wonders.
+            </li>
+            <li>
+                <img src="./assets/icons/medalla.svg" alt="marker" width="20" height="20">
+                HTML&nbsp;<img src="./assets/icons/html-5.svg" alt="html" width="15" height="15">
+                CSS&nbsp;<img src="./assets/icons/css.svg" alt="html" width="15" height="15">&nbsp;JS
+                <img src="./assets/icons/java.svg" alt="html" width="16" height="16">React&nbsp;
+                <img src="./assets/icons/react.svg" alt="html" width="15" height="15">Sass&nbsp;
+                <img src="./assets/icons/sass.svg" alt="html" width="17" height="17">Less&nbsp;
+                <img src="./assets/icons/less.svg" alt="html" width="17" height="17">Git&nbsp;
+                <img src="./assets/icons/git.svg" alt="html" width="17" height="17">(level of knowledge about average).
+            </li>
+            <li>
+                <img src="./assets/icons/medalla.svg" alt="marker" width="20" height="20">
+                I study on my own, read books, watch Vladilen Minin's channel and DevED.
+            </li>
+            <li>
+                <img src="./assets/icons/medalla.svg" alt="marker" width="20" height="20">English level A2.
+            </li>
+        </ul>
+        <div class="me">
+            <img src="./assets/images/me.jpg" alt="me" width="240" height="320">
+            <div class="pin"><img src="./assets/images/pin.png" alt="pin"></div>
+        </div>
+    </div>
+</main>
+
+</body>
+</html>
