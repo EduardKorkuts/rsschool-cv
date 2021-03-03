@@ -1,4 +1,4 @@
-### My *awesome* resume
+#My *awesome* resume
  * Eduard Korkuts
  * <img src="./assets/icons/mail.svg" width="20" height="20" alt="mail"/> Zealottpkr@gmail.com <img src="./assets/icons/phone.svg" width="20" height="20" alt="phonenumber"/> +375 44 7689823
  * i am studying programming because it's "magic" and i can't help surprising at its wonders.
