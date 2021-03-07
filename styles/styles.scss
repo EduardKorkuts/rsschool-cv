@@ -1,0 +1,282 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+@function getSizeInVw($px) {
+  @return $px / 1920 * 100vw;
+}
+
+
+body {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  min-height: 100vh;
+  background: rgb(218, 212, 212);
+  background: radial-gradient(circle, rgba(218, 212, 212, 1) 24%, rgba(218, 212, 212, 1) 59%, rgba(199, 207, 212, 1) 83%);
+  overflow-x: hidden;
+}
+.wrapper {
+  display: flex;
+  align-items: center;
+  width: 73%;
+  background: linear-gradient(to bottom, #6f7582, #202224);
+  border-left: getSizeInVw(8) solid whitesmoke;
+  min-height: 100vh;
+}
+
+.page {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+
+
+  &-main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: relative;
+    padding: getSizeInVw(50) 0 0 getSizeInVw(40);
+    margin-bottom: getSizeInVw(160);
+
+    &-list {
+      display: flex;
+      flex-direction: column;
+      list-style: none;
+      justify-content: space-between;
+
+      .list-marker {
+        display: block;
+        border: none;
+        width: getSizeInVw(27);
+        height: getSizeInVw(27);
+        border-radius: 50%;
+        background: radial-gradient(farthest-side at top left, #fff, #aaa);
+        box-shadow: getSizeInVw(2) getSizeInVw(5) getSizeInVw(10) rgba(0, 0, 0, 0.3), getSizeInVw(-2) getSizeInVw(-3) getSizeInVw(10) rgba(255, 255, 255, 0.5);
+        margin-right: getSizeInVw(15);
+      }
+
+      li {
+        user-select: none;
+        display: flex;
+        align-items: center;
+        line-height: getSizeInVw(41);
+        width: 100%;
+        font-family: 'Permanent Marker', cursive;
+        letter-spacing: getSizeInVw(0.2);
+        text-transform: uppercase;
+        font-size: getSizeInVw(23);
+        color: rgba(245, 245, 245, .7);
+        text-shadow: 0 0 getSizeInVw(3) black;
+
+        &:nth-child(6) {
+          padding-top: getSizeInVw(15);
+        }
+
+        .arrow {
+          display: flex;
+          margin-top: getSizeInVw(-35);
+          width: getSizeInVw(70);
+          justify-content: center;
+
+          svg {
+            fill: rgba(255, 255, 255, .6);
+          }
+        }
+
+      }
+    }
+  }
+
+  &-header {
+    display: flex;
+    width: 100%;
+    position: relative;
+
+
+    hgroup {
+      padding-top: getSizeInVw(20);
+      padding-left: getSizeInVw(40);
+      display: grid;
+      grid-template-rows: getSizeInVw(90) getSizeInVw(130);
+      grid-template-columns: getSizeInVw(450);
+      z-index: 1;
+      user-select: none;
+      span {
+        color: whitesmoke;
+      }
+
+      h1 {
+        font-family: 'Poppins', sans-serif;
+        font-size: getSizeInVw(75);
+        grid-row: 1/2;
+        text-shadow: getSizeInVw(-7) getSizeInVw(30) getSizeInVw(3) rgba(0, 0, 0, .2);
+        margin-bottom: getSizeInVw(18);
+        letter-spacing: getSizeInVw(1);
+
+      }
+
+      h2 {
+        display: flex;
+        font-family: "Poppins", sans-serif;
+        font-size: getSizeInVw(100);
+        grid-row: 2/3;
+        justify-self: end;
+        text-shadow: getSizeInVw(-7) getSizeInVw(30) getSizeInVw(3) rgba(0, 0, 0, .2);
+      }
+    }
+  }
+
+  &-photo {
+    width: getSizeInVw(380);
+    height: getSizeInVw(512);
+    position: absolute;
+    right: getSizeInVw(-20);
+    top: getSizeInVw(50);
+    transform: rotate(5deg);
+    filter: drop-shadow(getSizeInVw(-25) getSizeInVw(20) getSizeInVw(6) rgba(0, 0, 0, .3));
+    user-select: none;
+
+
+    img[data-me] {
+      max-width: 100%;
+      border-radius: getSizeInVw(5);
+    }
+
+    .pin {
+      width: getSizeInVw(35);
+      height: getSizeInVw(35);
+      position: absolute;
+      top: 0;
+      left: getSizeInVw(190);
+
+      img {
+        max-width: 100%;
+      }
+    }
+  }
+
+  &-contacts {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: getSizeInVw(35);
+    top: getSizeInVw(585);
+    transform: rotate(6deg);
+    font-family: "Permanent Marker", cursive;
+    letter-spacing: getSizeInVw(1);
+
+    &__logo {
+      display: flex;
+      width: getSizeInVw(50);
+      align-items: center;
+      justify-content: center;
+      margin-right: getSizeInVw(15);
+      user-select: none;
+      svg {
+        fill: #c7cfd4;
+      }
+      img {
+        max-width: 100%;
+      }
+    }
+    h3 {
+      color: #c7cfd4;
+      text-align: center;
+      font-size: getSizeInVw(50);
+      user-select: none;
+    }
+
+    &__phone {
+      display: flex;
+      align-items: center;
+      color: #c7cfd4;
+
+
+      &:hover {
+        filter: brightness(1.2);
+      }
+    }
+
+    &__mail {
+
+
+      display: flex;
+      align-items: center;
+      &:hover {
+        filter: brightness(1.2);
+
+      }
+
+    }
+
+
+    a {
+      text-decoration: none;
+      color: #c7cfd4;
+      font-size: getSizeInVw(37);
+    }
+  }
+
+  &-footer {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    user-select: none;
+    margin: auto;
+    background: transparent;
+    font-family: "Poppins", sans-serif;
+    font-size: getSizeInVw(16);
+    letter-spacing: getSizeInVw(0.2);
+    color: rgba(255, 255, 255, .4);
+    width: 75%;
+    &__info {
+      padding-left: 40px;
+    }
+    &__nav {
+      margin-top: getSizeInVw(15);
+      padding-left: getSizeInVw(25);
+      ul {
+        display: flex;
+        width: getSizeInVw(157);
+        justify-content: space-between;
+        list-style-type: none;
+        img, svg {
+          user-select: none;
+          filter: drop-shadow(0 0 getSizeInVw(5) rgba(245, 245, 245, .3));
+          &:hover {
+            filter: drop-shadow(0 0 getSizeInVw(5) rgba(255, 255, 255, .6))
+          }
+        }
+        img {
+          width: getSizeInVw(100);
+          height: getSizeInVw(33);
+        }
+        svg {
+          width: getSizeInVw(33);
+          height: getSizeInVw(33);
+        }
+      }
+
+      a {
+        text-decoration: none;
+      }
+    }
+
+    .nickname {
+      padding: 0 getSizeInVw(4) 0 getSizeInVw(4);
+      color: rgba(105, 168, 240, 0.4);
+
+      span {
+        color: rgba(245, 245, 245, 0.8);
+      }
+    }
+  }
+}
+
+
+
