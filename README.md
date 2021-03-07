@@ -1,1 +1,1 @@
-https://EduardKorkuts.io/rsschool-cv/
+https://eduardkorkuts.github.io/rsschool-cv/
